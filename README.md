@@ -8,7 +8,7 @@
 *** Thanks again! Now go create something AMAZING! :D
 *** /// d   u   b   p   i   x   e   l 
 *** this has additionally been changed by dubpixel for the dpx_ series of projects
-*** search dpx__pd_pooper .. replace COMMAND OPTION F
+*** search dpx_pd_pooper .. replace COMMAND OPTION F
 *** also has added kicad badge
 -->
 
@@ -35,11 +35,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/dubpixel/dpx__pd_pooper">
+  <a href="https://github.com/dubpixel/dpx_pd_pooper">
     <img src="images/logo.png" alt="Logo" height="120">
   </a>
 
-<h1 align="center">dpx__pd_pooper </h1>
+<h1 align="center">dpx_pd_pooper </h1>
 <h3 align="center"><i>pd poops on tap</i></h3>
 
   <p align="left">
@@ -55,9 +55,9 @@
      » 
     <a href="https://dubpixel.github.io/dpx_solder_555/ebom/index.html"><strong>Interactive BOM Here!</strong></a>
     ·
-    <a href="https://github.com/dubpixel/dpx__pd_pooper/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/dubpixel/dpx_pd_pooper/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/dubpixel/dpx__pd_pooper/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/dubpixel/dpx_pd_pooper/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
     </div>
     </p>
 </div>
@@ -168,7 +168,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/dubpixel/dpx__pd_pooper/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/dubpixel/dpx_pd_pooper/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,8 +192,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/dubpixel/dpx__pd_pooper/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=dubpixel/dpx__pd_pooper" alt="contrib.rocks image" />
+<a href="https://github.com/dubpixel/dpx_pd_pooper/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=dubpixel/dpx_pd_pooper" alt="contrib.rocks image" />
 </a>
 
 
@@ -212,7 +212,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 #Joshua Fleitell - i@dubpixel.tv
 
-Project Link: [https://github.com/dubpixel/dpx__pd_pooper](https://github.com/dubpixel/dpx__pd_pooper)
+Project Link: [https://github.com/dubpixel/dpx_pd_pooper](https://github.com/dubpixel/dpx_pd_pooper)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,16 +231,16 @@ Project Link: [https://github.com/dubpixel/dpx__pd_pooper](https://github.com/du
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/dubpixel/dpx__pd_pooper.svg?style=for-the-badge
-[contributors-url]: https://github.com/dubpixel/dpx__pd_pooper/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gdubpixel/dpx__pd_pooper.svg?style=for-the-badge
-[forks-url]: https://github.com/dubpixel/dpx__pd_pooper/network/members
-[stars-shield]: https://img.shields.io/github/stars/dubpixel/dpx__pd_pooper.svg?style=for-the-badge
-[stars-url]: https://github.com/dubpixel/dpx__pd_pooper/stargazers
-[issues-shield]: https://img.shields.io/github/issues/dubpixel/dpx__pd_pooper.svg?style=for-the-badge
-[issues-url]: https://github.com/dubpixel/dpx__pd_pooper/issues
-[license-shield]: https://img.shields.io/github/license/dubpixel/dpx__pd_pooper.svg?style=for-the-badge
-[license-url]: https://github.com/dubpixel/dpx__pd_pooper/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
+[contributors-url]: https://github.com/dubpixel/dpx_pd_pooper/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/gdubpixel/dpx_pd_pooper.svg?style=for-the-badge
+[forks-url]: https://github.com/dubpixel/dpx_pd_pooper/network/members
+[stars-shield]: https://img.shields.io/github/stars/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
+[stars-url]: https://github.com/dubpixel/dpx_pd_pooper/stargazers
+[issues-shield]: https://img.shields.io/github/issues/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
+[issues-url]: https://github.com/dubpixel/dpx_pd_pooper/issues
+[license-shield]: https://img.shields.io/github/license/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
+[license-url]: https://github.com/dubpixel/dpx_pd_pooper/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
