@@ -92,16 +92,15 @@
   </ol>
 </details>
     <br />
-    <br />
-    <br />
 <!-- ABOUT THE PROJECT -->
 <details>
-<summary><h3>About The Project</h3></summary>
-proving a basic ch224 pd power trigger IC to be used in forthcoming dubpixel / TNG ENT INC devices
-</details>
+  <summary><h3>About The Project</h3></summary>
+  proving a basic ch224 pd power trigger IC to be used in forthcoming dubpixel / TNG ENT INC devices
+
 </br>
 www.dubpixel.tv  - i@dubpixel.tv
 </br>
+</details>
 
 FRONT
 ![FRONT][product-front]
