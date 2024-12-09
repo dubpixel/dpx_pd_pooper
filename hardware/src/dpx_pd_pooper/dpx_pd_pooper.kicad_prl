@@ -80,37 +80,25 @@
   "project": {
     "files": [
       {
-        "name": "dpx_pd_pooper.kicad_sch",
-        "open": true,
-        "window": {
-          "display": 0,
-          "maximized": false,
-          "pos_x": 360,
-          "pos_y": 25,
-          "size_x": 720,
-          "size_y": 875
-        }
-      },
-      {
         "name": "dpx_pd_pooper.kicad_pcb",
-        "open": true,
+        "open": false,
         "window": {
           "display": 0,
           "maximized": false,
-          "pos_x": -11,
+          "pos_x": 19,
           "pos_y": 39,
           "size_x": 1440,
           "size_y": 875
         }
       },
       {
-        "name": "dpx_pd_pooper.kicad_pro",
+        "name": "dpx_pd_pooper.kicad_sch",
         "open": false,
         "window": {
           "display": 0,
-          "maximized": false,
-          "pos_x": 243,
-          "pos_y": 69,
+          "maximized": true,
+          "pos_x": 360,
+          "pos_y": 25,
           "size_x": 720,
           "size_y": 875
         }

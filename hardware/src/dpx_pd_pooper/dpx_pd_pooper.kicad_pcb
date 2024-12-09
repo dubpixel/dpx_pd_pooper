@@ -468,7 +468,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R2"
-			(at -2.73 -0.19 360)
+			(at -2.73 -0.19 0)
 			(layer "F.SilkS")
 			(uuid "397aac78-7054-420e-9c34-cbfab0393acf")
 			(effects
@@ -707,7 +707,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R3"
-			(at -2.73 -0.15 360)
+			(at -2.73 -0.15 0)
 			(layer "F.SilkS")
 			(uuid "83edf1e8-491b-4ae0-91d6-0651b06ae637")
 			(effects
@@ -2984,7 +2984,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R1"
-			(at -2.78 -0.12 360)
+			(at -2.78 -0.12 0)
 			(layer "F.SilkS")
 			(uuid "966b8f48-46eb-4f4f-8f6a-5705991468d3")
 			(effects
@@ -3637,7 +3637,7 @@
 		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "LED handsolder")
 		(property "Reference" "D1"
-			(at -1.299 -1.728 360)
+			(at -1.299 -1.728 0)
 			(layer "F.SilkS")
 			(uuid "eceb6623-3e0f-4f9c-b8b0-1d3882e474a7")
 			(effects
@@ -3648,7 +3648,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 0.015 -3.11 360)
+			(at 0.015 -3.11 0)
 			(layer "F.Fab")
 			(uuid "256dcbea-319e-4c5b-b6c2-9592836089fa")
 			(effects
@@ -3861,7 +3861,7 @@
 			(uuid "e7b31c47-49fa-47bd-8062-5f9c13fd1e75")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "0279acfc-f134-41c8-9a36-47a735ecb11c")
 			(effects
@@ -4302,7 +4302,7 @@
 		(at 41.795 71.52 180)
 		(descr "BEADC1608X95N")
 		(property "Reference" "FB1"
-			(at -0.24 -1.07 360)
+			(at -0.24 -1.07 0)
 			(layer "F.SilkS")
 			(uuid "4ff4102a-8317-46ec-96da-7b8f424e7000")
 			(effects
@@ -4313,7 +4313,7 @@
 			)
 		)
 		(property "Value" "220h 110mHz"
-			(at 0.24 -1.67 360)
+			(at 0.24 -1.67 0)
 			(layer "F.Fab")
 			(uuid "4e6d7c29-865b-421f-b551-b51f4d1784f6")
 			(effects
@@ -4502,7 +4502,7 @@
 			(at 0 -0.348371 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "db64b844-15fc-45bb-9070-ea354bdad5a3")
+			(uuid "026bd9a2-0599-455a-b87b-66da0f44d831")
 			(effects
 				(font
 					(size 1 1)
@@ -4515,7 +4515,7 @@
 			(at 0.75 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "362d2046-5585-44fd-bb88-75502a685144")
+			(uuid "4d11eb7b-ff58-4573-b1a5-b5426e1d8e84")
 			(effects
 				(font
 					(size 1 1)
@@ -4667,7 +4667,7 @@
 			)
 			(fill solid)
 			(layer "B.SilkS")
-			(uuid "abd87ec5-526f-467a-808b-761702564c2c")
+			(uuid "7060027e-06fd-4b3f-8559-bdd6a7fab56e")
 		)
 	)
 	(gr_line
@@ -7309,8 +7309,8 @@
 		)
 		(polygon
 			(pts
-				(xy 40.24 55.32) (xy 40.24 79.98) (xy 76.69 79.98) (xy 76.43 79.33) (xy 76.43 55.31) (xy 76.43 55.31)
-				(xy 40.24 55.31) (xy 40.23 55.32)
+				(xy 40.24 55.32) (xy 40.24 79.98) (xy 76.69 79.98) (xy 76.43 79.33) (xy 76.43 55.31) (xy 40.24 55.31)
+				(xy 40.23 55.32)
 			)
 		)
 		(filled_polygon
