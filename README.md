@@ -42,7 +42,7 @@
 <h1 align="center">dpx_pd_pooper </h1>
 <h3 align="center"><i>pd poops on tap</i></h3>
 
-  <p align="left">
+  <p align="center">
     ...a basic ch224k pd trigger board w/ usb-c connector
     <br />
     <br />
@@ -55,6 +55,7 @@
      » 
     <a href="https://dubpixel.github.io/dpx_pd_pooper/ebom/index.html"><strong>Interactive BOM Here!</strong></a>
     ·
+       <br />
     <a href="https://github.com/dubpixel/dpx_pd_pooper/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
     <a href="https://github.com/dubpixel/dpx_pd_pooper/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
