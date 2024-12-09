@@ -243,7 +243,7 @@ Project Link: [https://github.com/dubpixel/dpx_pd_pooper](https://github.com/dub
 [license-shield]: https://img.shields.io/github/license/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
 [license-url]: https://github.com/dubpixel/dpx_pd_pooper/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/dubpixel
 [product-screenshot]: images/screenshot.png
 [product-front]: images/front.png
 [product-rear]: images/rear.png
