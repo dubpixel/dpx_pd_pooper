@@ -49,11 +49,11 @@
     <br />
     <br />
     <p align="center">
-     <a href="https://github.com/dubpixel/dpx_solder_555/tree/main/"><strong>Project Here!</strong></a>
+     <a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/"><strong>Project Here!</strong></a>
      »  
-    <a href="https://github.com/dubpixel/dpx_solder_555/tree/main/src/bom"><strong>BOM Here!</strong></a>
+    <a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/src/bom"><strong>BOM Here!</strong></a>
      » 
-    <a href="https://dubpixel.github.io/dpx_solder_555/ebom/index.html"><strong>Interactive BOM Here!</strong></a>
+    <a href="https://dubpixel.github.io/dpx_pd_pooper/ebom/index.html"><strong>Interactive BOM Here!</strong></a>
     ·
     <a href="https://github.com/dubpixel/dpx_pd_pooper/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
