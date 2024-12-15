@@ -1,0 +1,13 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,1 uF,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,58.07,-58.7225,90.0,top
+D1,VBUS,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,62.455,-73.71,180.0,top
+FB1,220h 110mHz,FERRITE_0603,41.795,-71.52,180.0,top
+J2,VOUT,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",69.8,-65.91,90.0,top
+R1,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,55.69,-72.72,90.0,top
+R2,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,56.35,-58.92,-90.0,top
+R3,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,54.41,-58.94,-90.0,top
+R4,1k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,59.6,-72.77,90.0,top
+R5,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,53.73,-72.74,90.0,top
+R6,1k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,57.64,-72.74,90.0,top
+SW1,SW_DIP_x03,SP-03P,60.8,-65.45,0.0,top
+USB1,HRO-TYPE-C-31-M-12,HRO-TYPE-C-31-M-12-Assembly,45.37,-65.68,-90.0,top
