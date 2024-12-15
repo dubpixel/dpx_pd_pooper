@@ -10,4 +10,5 @@ R4,1k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,59.6,-72.77,90.0,top
 R5,10k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,53.73,-72.74,90.0,top
 R6,1k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,57.64,-72.74,90.0,top
 SW1,SW_DIP_x03,SP-03P,60.8,-65.45,0.0,top
+U1,CH224K,SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm_ThermalVias,54.5912,-65.2993,-90.0,top
 USB1,HRO-TYPE-C-31-M-12,HRO-TYPE-C-31-M-12-Assembly,45.37,-65.68,-90.0,top
