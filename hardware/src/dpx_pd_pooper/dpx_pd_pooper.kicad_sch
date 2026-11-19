@@ -171,23 +171,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 0 0 0)
+			(property "Reference" "U1"
+				(at 2.1941 11.43 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "CH224K"
+				(at 2.1941 10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_SO:SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm_ThermalVias"
 				(at 0 0 0)
 				(effects
 					(font
@@ -206,6 +208,24 @@
 				)
 			)
 			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCPART" "C970725"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C970725"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3928,7 +3948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "CH224K"
 			(at 42.8341 35.56 0)
 			(effects
 				(font
@@ -4723,7 +4743,7 @@
 		(lib_id "Graphic:Logo_Open_Hardware_Small")
 		(at 96.52 113.03 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -4766,15 +4786,6 @@
 			)
 		)
 		(property "Description" "Open Hardware logo, small"
-			(at 96.52 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 96.52 113.03 0)
 			(effects
 				(font
