@@ -1,0 +1,16 @@
+Comment,Designator,Footprint,LCSC,Quantity
+0R,R6,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17477,1
+1 uF,C1,C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C15849,1
+100k,R1,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C149504,1
+10k,"R4,R5",R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17414,2
+120k,R10,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17436,1
+210k,R11,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17547,1
+220h 110mHz,FB1,FERRITE_0603,C80165,1
+24k,R8,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17575,1
+56k,R9,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17756,1
+6.8k,R7,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17772,1
+CH224A,U1,SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm_ThermalVias,C42459160,1
+HRO-TYPE-C-31-M-12,USB1,HRO-TYPE-C-31-M-12-Assembly,C165948,1
+VBUS,PWR,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,C2297,1
+VOUT,J2,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",,1
+VSEL,J3,PinHeader_2x05_P2.54mm_Vertical,,1

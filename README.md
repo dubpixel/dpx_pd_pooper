@@ -27,7 +27,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![CERN-OHL-W][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -43,7 +43,7 @@
 <h3 align="center"><i>pd poops on tap</i></h3>
 
   <p align="center">
-    ...a basic ch224k pd trigger board w/ usb-c connector
+    ...a ch224a usb-c pd trigger board with a jumper voltage selector (9 / 12 / 15 / 20 / 28 V)
     <br />
     <br />
     <br />
@@ -51,9 +51,11 @@
     <p align="center">
      <a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/"><strong>Project Here!</strong></a>
      »  
-    <a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/src/bom"><strong>BOM Here!</strong></a>
+    <a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/hardware/production_files_RTG"><strong>BOM Here!</strong></a>
      » 
-    <a href="https://dubpixel.github.io/dpx_pd_pooper/ebom/index.html"><strong>Interactive BOM Here!</strong></a>
+    <a href="https://dubpixel.github.io/dpx_pd_pooper/"><strong>Manual Here!</strong></a>
+     » 
+    <a href="https://dubpixel.github.io/dpx_pd_pooper/ibom/"><strong>Interactive BOM Here!</strong></a>
     ·
        <br />
     <a href="https://github.com/dubpixel/dpx_pd_pooper/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
@@ -95,24 +97,36 @@
 <!-- ABOUT THE PROJECT -->
 <details>
   <summary><h3>About The Project</h3></summary>
-  proving a basic ch224 pd power trigger IC to be used in forthcoming dubpixel / TNG ENT INC devices
+  a small usb-c power delivery (PD) trigger board. plug it into a PD charger, pick a voltage with a jumper, and get that voltage on a screw terminal.
+  built to prove the WCH CH224 PD trigger IC for forthcoming dubpixel / TNG ENT INC devices (dpx_faders uses the CH224K version of this circuit).
+
+  * board: 35.0 x 27.3 mm, 2 layer, 4x M3 holes
+  * chip: CH224A, resistor-configured (no firmware, no I2C needed)
+  * output: 5 V (no shunt) or 9 / 12 / 15 / 20 / 28 V by shunting one column of the VSEL header
+  * status: v0d8 (CH224A) sent to production 2026-11-18. untested until the boards arrive.
+  * the earlier CH224K board (v0d5, tag `ch224k`) is the tested baseline.
 
 </br>
 www.dubpixel.tv  - i@dubpixel.tv
 </br>
 </details>
 
-FRONT
-![FRONT][product-front]
+v0d8 (CH224A) front render
+![FRONT v0d8][product-front-a]
 
-REAR
-![REAR][product-rear]
+[v0d8 flip video](images/pdpooper_ch224a_flip.mp4)
 
-iBOM PCB Front
+![FLIP v0d8](images/pdpooper_ch224a_flip.gif)
+
+Previous revision, v0d5 (CH224K, 3-position DIP switch)
+![FRONT v0d5][product-front]
+![REAR v0d5][product-rear]
+
+iBOM PCB Front (v0d5)
 ![iBOM Front][product-pcbFront]
 
-iBOM PCB Rear
-![iBOM Front][product-pcbRear]
+iBOM PCB Rear (v0d5)
+![iBOM Rear][product-pcbRear]
 
 
 
@@ -142,19 +156,44 @@ iBOM PCB Rear
 
 ### Prerequisites
 
+* a USB-C PD charger that offers the voltage you want (28 V needs a 140 W EPR charger)
+* a USB-C cable
+* a 2x5 header and shunts (J3) and a 5.08 mm terminal block (J2). Both are left unpopulated by the JLC order and hand-fit.
+* KiCad 10 if you want to open the project
 
 ### Installation
 
-1. Download...
-2. Enjoy.
-3. Repeat as Needed!
+1. Hand-fit J2 (VOUT terminal block) and J3 (VSEL 2x5 header).
+2. Put one shunt on the column for the voltage you want.
+3. Plug in the charger, then measure the output at J2 before connecting a load.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+VSEL (J3) is a 2x5 header. Shunt ONE column. Left to right on the front silk:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+| column | voltage | CFG1 resistor |
+|---|---|---|
+| none | 5 V | none |
+| 1 | 9 V | R7 6.8k |
+| 2 | 12 V | R8 24k |
+| 3 | 15 V | R9 56k |
+| 4 | 20 V | R10 120k |
+| 5 | 28 V | R11 210k |
+
+Unplug and replug USB-C after moving the shunt. The chip reads the resistor when it negotiates, not continuously.
+
+* PWR LED lights when VBUS is present.
+* VOUT (J2) is the negotiated voltage. The board does no regulation, so the load must accept the voltage you picked.
+* first power-up of the CH224A board: start on 15 V and check VHV, VBUS and CFG1 before trusting the other columns. R5 is deliberately 10k.
+
+Full details are in the [manual page](https://dubpixel.github.io/dpx_pd_pooper/) (source in `docs/`).
+
+### Known issues (v0d8)
+
+* back silk text (VSEL instructions) runs past the board edge and overlaps some reference designators. Cosmetic.
+* the version stamp still reads v0d8 and does not distinguish the CH224A board from the planned next spin.
+* CH224A VBUS pin tolerance is contradictory in the WCH datasheet (3.8 V in section 7.1, 32 V in the abs-max table). The 10k at R5 is a first-power-up safety choice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,10 +202,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] v0d5: CH224K board with 3-position DIP switch (tag `ch224k`)
+- [x] v0d8: CH224A with VSEL jumper header, 9 / 12 / 15 / 20 / 28 V (sent to production 2026-11-18)
+- [ ] bench-test the CH224A board against the CH224K board, same charger
+- [ ] fix the back silk overflow and bump the version stamp
+- [ ] decide whether the CH224A goes into dpx_faders rev 0.8
+- [ ] LCSC part numbers for J2 and J3 so JLC can place them
 
 See the [open issues](https://github.com/dubpixel/dpx_pd_pooper/issues) for a full list of proposed features (and known issues).
 
@@ -201,7 +242,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the CERN Open Hardware Licence Version 2 - Weakly Reciprocal (CERN-OHL-W-2.0). See `license.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,9 +262,8 @@ Project Link: [https://github.com/dubpixel/dpx_pd_pooper](https://github.com/dub
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* WCH CH224A / CH224K datasheets
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -233,17 +273,18 @@ Project Link: [https://github.com/dubpixel/dpx_pd_pooper](https://github.com/dub
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
 [contributors-url]: https://github.com/dubpixel/dpx_pd_pooper/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gdubpixel/dpx_pd_pooper.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
 [forks-url]: https://github.com/dubpixel/dpx_pd_pooper/network/members
 [stars-shield]: https://img.shields.io/github/stars/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
 [stars-url]: https://github.com/dubpixel/dpx_pd_pooper/stargazers
 [issues-shield]: https://img.shields.io/github/issues/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
 [issues-url]: https://github.com/dubpixel/dpx_pd_pooper/issues
-[license-shield]: https://img.shields.io/github/license/dubpixel/dpx_pd_pooper.svg?style=for-the-badge
-[license-url]: https://github.com/dubpixel/dpx_pd_pooper/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/badge/license-CERN--OHL--W--2.0-blue?style=for-the-badge
+[license-url]: https://github.com/dubpixel/dpx_pd_pooper/blob/main/license.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jfleitell
 [product-screenshot]: images/screenshot.png
+[product-front-a]: images/pdpooper_ch224a_front.png
 [product-front]: images/front.png
 [product-rear]: images/rear.png
 [product-pcbFront]: images/pcb_front.png
@@ -264,5 +305,5 @@ Project Link: [https://github.com/dubpixel/dpx_pd_pooper](https://github.com/dub
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-[KiCad.org]: https://img.shields.io/badge/KiCad-v8.0.6-blue
+[KiCad.org]: https://img.shields.io/badge/KiCad-v10-blue
 [KiCad-url]: https://kicad.org 

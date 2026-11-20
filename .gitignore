@@ -22,3 +22,6 @@
 .DS_Store
 # other stuff
 
+
+# KiCad auto-backups and local 3D exports
+**/*-backups/

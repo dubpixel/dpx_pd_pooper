@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>dpx_pd_pooper manual</title>
+<meta name="description" content="usb-c pd trigger board with a jumper voltage selector. 5 / 9 / 12 / 15 / 20 / 28 V.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a; --panel:#151515; --card-2:#1a1a1a; --border:#2a2a2a;
+  --accent:#c9a227; --accent-soft:#e8d48b; --gold-dim:#8b7355;
+  --text:#eee; --text-dim:#999;
+  --font-mono:'JetBrains Mono',monospace;
+  --font-sans:'Space Grotesk',sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.6}
+main{max-width:920px;margin:0 auto;padding:0 16px 40px}
+h1,h2,h3,code,.mono{font-family:var(--font-mono)}
+h2{font-size:1.2rem;margin:0 0 .75rem;color:var(--accent-soft)}
+a{color:var(--accent)}
+.hero{text-align:center;padding:48px 0 24px}
+.hero h1{font-size:clamp(1.8rem,6vw,2.8rem);margin:.4rem 0;background:linear-gradient(135deg,var(--accent-soft),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--text-dim);margin:.25rem 0 1.25rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;color:var(--gold-dim);font-family:var(--font-mono)}
+.btn{display:inline-block;padding:.6rem 1.2rem;border-radius:8px;font-weight:600;text-decoration:none;margin:.25rem}
+.btn.solid{background:var(--accent);color:var(--bg)}
+.btn.outline{border:1px solid var(--accent);color:var(--accent-soft)}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:1.25rem;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.shot{width:100%;border-radius:8px;display:block}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{border-bottom:1px solid var(--border);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{color:var(--gold-dim);font-family:var(--font-mono);font-weight:500;font-size:.75rem;text-transform:uppercase}
+.table-wrap{overflow-x:auto}
+code{background:var(--card-2);padding:.1rem .35rem;border-radius:4px;font-size:.85em}
+.steps{list-style:none;padding:0;counter-reset:step;margin:0}
+.step{display:flex;gap:1rem;margin-bottom:1rem}
+.step::before{counter-increment:step;content:counter(step);flex:0 0 2rem;height:2rem;border-radius:50%;background:var(--card-2);border:1px solid var(--gold-dim);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono)}
+.callout{border-left:3px solid var(--accent);background:var(--panel);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:0 0 20px}
+.callout.warn{border-left-color:#d9534f}
+.volts{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;text-align:center;font-family:var(--font-mono);font-size:.8rem}
+.volts div{background:var(--card-2);border:1px solid var(--border);border-radius:6px;padding:.5rem .2rem}
+.volts b{display:block;color:var(--accent);font-size:1.05rem}
+.volts small{color:var(--text-dim)}
+video{width:100%;max-width:540px;display:block;margin:0 auto;border-radius:8px}
+.footer{text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid var(--border)}
+.footer-links{display:flex;justify-content:center;gap:50px;margin-bottom:24px;flex-wrap:wrap}
+.footer-link{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--text-dim);transition:all .3s ease}
+.footer-link:hover{color:var(--accent);transform:translateY(-2px)}
+.footer-link svg{width:32px;height:32px;margin-bottom:6px;fill:currentColor}
+.footer-link span{font-family:var(--font-mono);font-size:.65rem;text-transform:lowercase}
+.footer-logo{height:36px;width:auto}
+.footer-tagline{font-size:.7rem;color:var(--text-dim);margin-top:6px}
+.footer-version{font-family:var(--font-mono);font-size:.65rem;color:var(--text-dim);margin-top:8px}
+@media (max-width:520px){.volts{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <img src="images/logo.png" alt="dubpixel" height="72">
+  <div class="eyebrow">dpx_pd_pooper // v0d8 ch224a</div>
+  <h1>pd poops on tap</h1>
+  <p>plug in a usb-c pd charger. shunt a jumper. get 9, 12, 15, 20 or 28 volts on a screw terminal.</p>
+  <a class="btn solid" href="https://github.com/dubpixel/dpx_pd_pooper">github</a>
+  <a class="btn outline" href="#use">how to use it</a>
+</section>
+
+<section class="panel">
+  <video autoplay loop muted playsinline poster="images/pdpooper_flip_poster.png">
+    <source src="images/pdpooper_flip.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section class="panel">
+  <h2>quick ref</h2>
+  <div class="table-wrap"><table>
+    <tr><th>thing</th><th>value</th></tr>
+    <tr><td>board</td><td>35.0 x 27.3 mm, 2 layer, 4x M3 holes</td></tr>
+    <tr><td>pd chip</td><td>WCH CH224A, resistor configured. no firmware, no i2c.</td></tr>
+    <tr><td>input</td><td>usb-c (HRO TYPE-C-31-M-12), PD sink</td></tr>
+    <tr><td>output</td><td>J2 two-pin 5.08 mm screw terminal, labelled + and -</td></tr>
+    <tr><td>selector</td><td>J3 (VSEL) 2x5 header, shunt one column</td></tr>
+    <tr><td>indicator</td><td>PWR led (lights with VBUS)</td></tr>
+    <tr><td>license</td><td>CERN-OHL-W-2.0</td></tr>
+  </table></div>
+</section>
+
+<section class="panel" id="use">
+  <h2>pick a voltage</h2>
+  <div class="volts" aria-label="VSEL columns">
+    <div><b>none</b><small>5 V</small></div>
+    <div><b>1</b><small>9 V</small></div>
+    <div><b>2</b><small>12 V</small></div>
+    <div><b>3</b><small>15 V</small></div>
+    <div><b>4</b><small>20 V</small></div>
+    <div><b>5</b><small>28 V</small></div>
+  </div>
+  <p style="margin-top:1rem">shunt <strong>one</strong> column of J3. columns run left to right on the front silk (9 12 15 20 28). no shunt means 5 V.</p>
+  <div class="table-wrap"><table>
+    <tr><th>column</th><th>voltage</th><th>resistor on cfg1</th></tr>
+    <tr><td>none</td><td>5 V</td><td>none</td></tr>
+    <tr><td>1</td><td>9 V</td><td>R7 6.8k</td></tr>
+    <tr><td>2</td><td>12 V</td><td>R8 24k</td></tr>
+    <tr><td>3</td><td>15 V</td><td>R9 56k</td></tr>
+    <tr><td>4</td><td>20 V</td><td>R10 120k</td></tr>
+    <tr><td>5</td><td>28 V</td><td>R11 210k</td></tr>
+  </table></div>
+  <div class="callout">unplug and replug usb-c after moving the shunt. the chip reads the resistor when it negotiates, not continuously.</div>
+  <div class="callout warn">the board does not regulate. J2 gets whatever voltage you negotiated, so your load has to survive it. 28 V needs a charger that offers EPR (140 W class).</div>
+</section>
+
+<section class="panel">
+  <h2>first power-up</h2>
+  <ol class="steps">
+    <li class="step"><div>hand-fit J2 (terminal block) and J3 (header). JLC does not place them.</div></li>
+    <li class="step"><div>shunt the 15 V column. nothing connected to J2.</div></li>
+    <li class="step"><div>plug in the charger. PWR should light. measure J2: about 15 V.</div></li>
+    <li class="step"><div>check VHV, VBUS and CFG1 on U1 while you are there. this is the first CH224A board, so confirm it behaves before you trust the other columns.</div></li>
+    <li class="step"><div>repeat for the other columns, replugging each time. compare against the older CH224K board on the same charger.</div></li>
+  </ol>
+</section>
+
+<section class="grid">
+  <div class="panel">
+    <h2>front</h2>
+    <img class="shot" src="images/front.png" alt="v0d8 front render">
+  </div>
+  <div class="panel">
+    <h2>what is on it</h2>
+    <div class="table-wrap"><table>
+      <tr><th>ref</th><th>part</th></tr>
+      <tr><td>U1</td><td>CH224A (C42459160)</td></tr>
+      <tr><td>USB1</td><td>HRO TYPE-C-31-M-12 (C165948)</td></tr>
+      <tr><td>R7 to R11</td><td>6.8k, 24k, 56k, 120k, 210k</td></tr>
+      <tr><td>R4, R5</td><td>10k</td></tr>
+      <tr><td>R1</td><td>100k</td></tr>
+      <tr><td>R6</td><td>0R</td></tr>
+      <tr><td>C1</td><td>1 uF</td></tr>
+      <tr><td>FB1</td><td>ferrite 0603 (C80165)</td></tr>
+      <tr><td>PWR</td><td>led 0805 (C2297)</td></tr>
+      <tr><td>J2, J3</td><td>terminal block, 2x5 header (hand-fit)</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>troubleshooting</h2>
+  <div class="table-wrap"><table>
+    <tr><th>symptom</th><th>try</th></tr>
+    <tr><td>stuck at 5 V</td><td>no shunt, or the shunt spans two columns. one column only. replug usb-c.</td></tr>
+    <tr><td>wrong voltage</td><td>the charger may not offer that voltage. check its label, and try a lower column.</td></tr>
+    <tr><td>no output at all</td><td>check PWR led, then the cable. some usb-c cables are not PD capable.</td></tr>
+    <tr><td>changed shunt, nothing changed</td><td>unplug and replug usb-c.</td></tr>
+  </table></div>
+</section>
+
+<section class="panel">
+  <h2>known issues (v0d8)</h2>
+  <ul>
+    <li>back silk instructions run past the board edge and overlap some reference designators. cosmetic.</li>
+    <li>version stamp still reads v0d8, so it does not distinguish this CH224A board from the next spin.</li>
+    <li>the WCH datasheet states the CH224A VBUS pin tolerance two ways (3.8 V vs 32 V). R5 is 10k for that reason.</li>
+    <li>untested: production boards ordered 2026-11-18.</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>files</h2>
+  <ul>
+    <li><a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/hardware/production_files_RTG/v0d8-ch224a">BOM, CPL and gerbers (v0d8-ch224a)</a></li>
+    <li><a href="https://github.com/dubpixel/dpx_pd_pooper/blob/main/CHANGELOG.md">changelog</a></li>
+    <li><a href="https://github.com/dubpixel/dpx_pd_pooper/tree/main/iBom">interactive BOM source</a></li>
+  </ul>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/dubpixel/dpx_pd_pooper" class="footer-link" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      <span>github</span>
+    </a>
+    <a href="https://github.com/dubpixel/dpx_pd_pooper/issues" class="footer-link" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+      <span>issues</span>
+    </a>
+  </div>
+  <a href="https://www.dubpixel.tv" target="_blank" rel="noopener" title="dubpixel.tv">
+    <img src="images/logo.png" alt="dubpixel" class="footer-logo">
+  </a>
+  <div class="footer-tagline">making strange things daily</div>
+  <div class="footer-version">v0d8-ch224a</div>
+</footer>
+
+</main>
+</body>
+</html>
